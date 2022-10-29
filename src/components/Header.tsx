@@ -1,10 +1,10 @@
-import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import * as React from 'react';
+import SearchIcon from "@mui/icons-material/Search";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
 
 type User = {
   name: string;
@@ -22,12 +22,18 @@ interface HeaderProps {
   onCreateAccount?: () => void;
 }
 
-const Header = ({user, sections, title, onLogin, onLogout, onCreateAccount}: HeaderProps) => {
-
+const Header = ({
+  user,
+  sections,
+  title,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+}: HeaderProps) => {
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-      <Button size="small">Subscribe</Button>
+      <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Button size="small">Subscribe</Button>
         <Typography
           component="h2"
           variant="h5"
@@ -48,7 +54,7 @@ const Header = ({user, sections, title, onLogin, onLogout, onCreateAccount}: Hea
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+        sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
         {sections?.map((section) => (
           <Link
@@ -65,6 +71,6 @@ const Header = ({user, sections, title, onLogin, onLogout, onCreateAccount}: Hea
       </Toolbar>
     </React.Fragment>
   );
-}
+};
 
-export default Header
+export default Header;

@@ -1,18 +1,18 @@
 import { Story, Meta } from "@storybook/react/types-6-0";
 import React from "react";
 
-import Header from "@/src/components/Header";
+import Footer from "@/src/components/Footer";
 
 export default {
-  title: "Example/Header",
-  component: Header,
+  title: "Example/Footer",
+  component: Footer,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
-} as Meta<typeof Headers>;
+} as Meta<typeof Footer>;
 
-const Template: Story<typeof Header> = (args) => <Header {...args} />;
+const Template: Story<typeof Footer> = (args) => <Footer {...args} />;
 
 export const LoggedIn = Template.bind({
   user: {
